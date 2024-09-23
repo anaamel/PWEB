@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra Papel e Tesoura</title>
+
+    <script>
+        while (true) {
+            var escolha
+            var resposta
+
+            escolha = prompt("Escolha uma opção:  \n1 - Pedra \n2 - Papel \n3 - Tesoura \n4 - Sair");
+            escolha = parseInt(escolha)
+            if (escolha == 4) {
+                break;
+            }
+
+            var computador = Math.random();
+
+            if (computador <= 0.33) {
+                resposta = 1;
+                alert("Computador - pedra");
+            }
+            else if ((computador > 0.33) && (computador <= 0.66)) {
+                resposta = 2;
+                alert("Computador - papel");
+            }
+            else {
+                resposta = 3;
+                alert("Computador - tesoura");
+            }
+
+
+
+            switch (resposta) {
+                case 1: if (escolha == 1) {
+                    alert("jogo empatado.");
+                }
+                else if (escolha == 2) {
+                    alert("você venceu!");
+                }
+                else {
+                    alert("o computador venceu!");
+                }
+                    break;
+
+                case 2: if (escolha == 1) {
+                    alert("o computador venceu!");
+                }
+                else if (escolha == 2) {
+                    alert("jogo empatado.");
+                }
+                else {
+                    alert("você venceu!");
+                }
+                    break;
+                case 3: if (escolha == 1) {
+                    alert("você venceu!");
+                }
+                else if (escolha == 2) {
+                    alert("o computador venceu!");
+                }
+                else {
+                    alert("jogo empatado.");
+                }
+                    break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
