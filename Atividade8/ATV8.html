@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa 45 pessoas</title>
+    <link rel="stylesheet" href="style8.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Qual é sua opinião sobre o filme que você assistiu?</h1>
+        <form id="surveyForm">
+            <label for="age">Idade:</label>
+            <input type="number" id="age" required><br>
+
+            <label for="gender">Sexo:</label>
+            <select id="gender" required>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select><br>
+
+            <label for="opinion">Opinião:</label>
+            <select id="opinion" required>
+                <option value="4">Ótimo</option>
+                <option value="3">Bom</option>
+                <option value="2">Regular</option>
+                <option value="1">Péssimo</option>
+            </select><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div id="results" class="results"></div>
+    </div>
+
+    <script src="script8.js"></script>
+</body>
+</html>

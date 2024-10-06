@@ -1,0 +1,43 @@
+body {
+    background-color: #dc4a4a; /* Cor de fundo suave */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff; /* Fundo branco para o formulário */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Largura do container */
+    text-align: center; /* Centraliza o texto */
+}
+
+input, select {
+    margin: 10px 0;
+    padding: 8px;
+    width: 90%; /* Largura do input e select */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50; /* Cor do botão */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049; /* Cor do botão ao passar o mouse */
+}
+
+.results {
+    margin-top: 20px;
+}
