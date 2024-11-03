@@ -1,0 +1,19 @@
+* {
+    background-color: #6cdaff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 30px;
+}
+
+#texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
