@@ -1,0 +1,73 @@
+/* *{
+
+} */
+
+h1{
+    font-family:'Courier New', Courier, monospace ;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+body {
+    background-image: url('imagens/Lux.png');
+    background-repeat: repeat;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    border: 4px solid #ffffff;
+    border-radius: 10px;
+    padding: 20px;           
+    margin: 20px;            
+    background-color: #d99dfc;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 300px;
+    margin-right: 300px;
+
+}
+
+.container{
+    display: flex;
+    padding: 5px;
+    width: 700px;
+    border-radius: 100px;
+    background-color: #f6f2c2;
+    margin: auto;
+    position: relative;
+}
+
+img { 
+    margin-left: 20px;
+    margin-right: 14px;
+}
+
+a {
+    margin-top:0%;
+}
+
+.sub-cont{
+    margin: auto;
+}
+
+.mega-cont{
+    display: flex;
+}
+
+.textol{
+    margin-right: 20px;
+    margin-top: 6px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+
+h5{
+    margin-top: 0px;
+    margin-bottom: 9px;
+}
+
+footer {
+    background-image: linear-gradient(to right, #4727ff, #d99dfc);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
