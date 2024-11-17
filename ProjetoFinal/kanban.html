@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Suas missões</title>
+</head>
+
+<body>
+    <header>
+        <img src="imagens/facttec.png" alt="Logo da Fact.tec">
+        <h1>Suas missões</h1>
+    </header>
+
+    <main class="status-bar">
+
+        <div class="status-column">
+            <div class="status-one">
+                <h2>Para estudar</h2>
+
+                <button class="add-card" data-btn-id="1">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="status-column">
+            <div class="status-two">
+                <h2>Em progresso</h2>
+
+                <button class="add-card" data-btn-id="2">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="status-column">
+
+            <div class="status-three">
+                <h2>Concluído</h2>
+
+                <button class="add-card" data-btn-id="3">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- quadro kanban -->
+    <main class="kanban">
+
+        <!-- coluna 1 -->
+        <div class="kanban-column" data-id="1">
+
+            <!-- cards -->
+            <div class="kanban-cards">
+                <div class="kanban-card" data-card-id="1" draggable="true">
+
+                    <!-- classe com espaço usado para diferenciar -->
+                    <div class="badge high">
+                        <span>
+                            Alta prioridade
+                        </span>
+                    </div>
+
+                    <p class="card-title">
+                        Prova 1
+                    </p>
+
+                    <div class="card-info">
+                        <div class="card-icons">
+                            <p>
+                                <i class="fa-solid fa-circle"></i>
+                                <i class="fa-solid fa-paperclip">
+                                    1
+                                </i>
+                            </p>
+                        </div>
+
+                        <div class="creator">
+                            <h4>Programação Web</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- coluna 2 -->
+        <div class="kanban-column" data-id="2">
+
+            <!-- cards -->
+            <div class="kanban-cards">
+                <div class="kanban-card" data-card-id="2" draggable="true">
+                    <div class="badge medium">
+                        <span>
+                            Média prioridade
+                        </span>
+                    </div>
+
+                    <p class="card-title">
+                        Preencher questionário
+                    </p>
+
+                    <div class="card-info">
+                        <div class="card-icons">
+                            <p>
+                                <i class="fa-solid fa-circle"></i>
+                                <i class="fa-solid fa-paperclip">
+                                    2
+                                </i>
+                            </p>
+                        </div>
+
+                        <div class="creator">
+                            <h4>Programação Web</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- coluna 3 -->
+        <div class="kanban-column" data-id="3">
+
+            <!-- cards -->
+            <div class="kanban-cards">
+                <div class="kanban-card" data-card-id="3" draggable="true">
+                    <div class="badge low">
+                        <span>
+                            Baixa prioridade
+                        </span>
+                    </div>
+
+                    <p class="card-title">
+                        Visitar site de cursos
+                    </p>
+
+                    <div class="card-info">
+                        <div class="card-icons">
+                            <p>
+                                <i class="fa-solid fa-circle">
+
+                                </i> <i class="fa-solid fa-paperclip">
+                                    1
+                                </i>
+                            </p>
+                        </div>
+
+                        <div class="creator">
+                            <h4>Programação Web</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="kanban-card" data-card-id="4" draggable="true">
+                    <div class="badge low">
+                        <span>
+                            Baixa prioridade
+                        </span>
+                    </div>
+
+                    <p class="card-title">
+                        Converse com amigos Front-End
+                    </p>
+
+                    <div class="card-info">
+                        <div class="card-icons">
+                            <p>
+                                <i class="fa-solid fa-circle">
+
+                                </i> <i class="fa-solid fa-paperclip">
+                                    1
+                                </i>
+                            </p>
+                        </div>
+
+                        <div class="creator">
+                            <h4>Programação Web</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- popup de adicionar  -->
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="popup-close">&times;</span>
+            <h2>Adicionar Card</h2>
+            <form id="popupForm">
+
+                <!-- Título da atv -->
+                <p><label for="cardTitle">Título:</label></p>
+                <input type="text" id="cardTitle" name="title" placeholder="Digite o título do card" required>
+
+                <!-- Descrição -->
+                <p><label for="cardDescription">Descrição:</label></p>
+                <textarea id="cardDescription" name="description" placeholder="Digite a descrição do card" rows="4"
+                    required></textarea>
+
+                <!-- Data limite -->
+                <p><label for="cardDate">Data Limite:</label></p>
+                <input type="date" id="cardDate" name="date" required>
+
+                <!-- Prioridade -->
+                <p><label for="cardPriority">Prioridade:</label></p>
+                <select id="cardPriority" name="priority" required>
+                    <option value="" disabled selected>Selecione a prioridade</option>
+                    <option value="alta">Alta</option>
+                    <option value="média">Média</option>
+                    <option value="baixa">Baixa</option>
+                </select>
+
+                <!-- Botão Salvar -->
+                <p><button type="submit" class="save-button">Ok</button></p>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- popup do conteudo -->
+
+    <div id="popup-view" class="popup-view">
+        <div class="popup-view-content">
+            <span id="closePopupView" class="popup-close">&times;</span>
+            <h2>Preencher questionário</h2>
+            <form id="popup-view-Form">
+                <div class="title-card-content">
+                    <h3 class="creator-card">Programação Web</h3>
+
+                    <h3 class="priority-card">Média prioridade</h3>
+                </div>
+
+                <h4 class="description-card">Descrição</h4>
+
+                <div class="description-card-content">Abrir o questionário no link, responder as questões e enviar, até
+                    mais.</div>
+
+                <h4 class="date-card">Data limite</h4>
+
+                <div class="date-card-content">19 de Agosto de 2024</div>
+
+                <h4 class="link-card">Links do professor</h4>
+
+                <div class="link-card-content"><a
+                        href="https://docs.google.com/forms...">https://docs.google.com/forms...</a></div>
+
+                <div class="link-card-content"><a
+                        href="https://como-responder-formul...">https://como-responder-formul...</a></div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="src/javascript/script.js"></script>
+
+</body>
+
+</html>
